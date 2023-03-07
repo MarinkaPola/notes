@@ -160,7 +160,7 @@ class NoteController extends Controller
      */
     public function detachFile(DetachAttachmentRequest $request, Note $note)
     {
-        $this->authorize('detach_file', $note);
+        $this->authorize('detachFile', $note);
 
         /** @var Attachment $attachment */
         $attachment = $note->attachments()->where('id', $request->get('id'))->first();
